@@ -1,0 +1,25 @@
+using System;
+
+namespace _05._Supplies_for_School
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int paketPens =int.Parse (Console.ReadLine());
+            int paketMarker = int.Parse(Console.ReadLine());
+            int literPreparation = int.Parse(Console.ReadLine());
+            int reduction = int.Parse(Console.ReadLine());
+            double pensPrice = paketPens * 5.80;
+            
+            double markerPrice = paketMarker * 7.20;
+            
+            double preparationPrice = literPreparation * 1.20;
+            
+            double materialsPrice = pensPrice + markerPrice + preparationPrice;
+
+            double reductionPrice = materialsPrice - (materialsPrice * 0.25);
+            Console.WriteLine(reductionPrice);
+        }
+    }
+}
