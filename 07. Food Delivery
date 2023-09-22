@@ -1,0 +1,38 @@
+using System;
+
+namespace _07._Food_Delivery
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1.Четем от конзолата:
+            //Брой  пилешки менюта (цена - 10.35)
+            int chickenQuantity = int.Parse(Console.ReadLine());
+
+            //Брой менюта с риба (цена - 12.40 )
+            int fishQuantity = int.Parse(Console.ReadLine());    
+
+            //Брой вегитариански менюта - (цена - 8.15)
+            int veganQuantity = int.Parse(Console.ReadLine());
+
+            //2.Намираме каква ще е цената на всяка група менюта:
+            double chickenPrice = chickenQuantity * 10.35;
+            double fishPrice = fishQuantity * 12.40;
+            double veganPrice = veganQuantity * 8.15;
+
+            //3.Намираме общата сметка за менютата:
+            double menuPrice = chickenPrice + fishPrice + veganPrice;
+
+            //4/Намираме цената на десерта ( 20% от обюата сметка)
+            double dessertPrice = menuPrice * 0.20;
+
+            //5.Намираме сумата от цялата сметка :
+            //общата сметка за менюптата + десерт + доставката(2.50)
+            double totalPrice = menuPrice + dessertPrice + 2.50;
+
+            //6.Отпечатваме  резултата на конзолата :
+            Console.WriteLine(totalPrice);
+        }
+    }
+}
