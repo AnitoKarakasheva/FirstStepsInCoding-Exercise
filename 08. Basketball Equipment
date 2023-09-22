@@ -1,0 +1,30 @@
+using System;
+
+namespace _08._Basketball_Equipment
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1.четем от конзолата такасата за една година
+            int taxPerYear = int.Parse(Console.ReadLine());
+
+            //2.Намираме цената за всяка част от екипировката:
+            //кецове = 40 % по-малко от такасата
+            double shoes = taxPerYear - taxPerYear * 0.4;
+
+            //екип = 20 % по-малко от кецовете
+            double outfit = shoes - shoes * 0.2;
+            //топка = 1/4 от екипа 
+            double ball = outfit / 4;
+
+            //аксесоари = 1/5 от топката
+            double acc = ball / 5;
+            //3.Намираме общата сума(таксата + кецове + екип + топка +аксесоари)
+            double sum = taxPerYear + shoes + outfit + ball + acc;
+
+            //4.Отпеяатваме резултата на конзолата
+            Console.WriteLine(sum);
+        }
+    }
+}
