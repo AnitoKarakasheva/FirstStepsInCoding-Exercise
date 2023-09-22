@@ -1,0 +1,27 @@
+using System;
+
+namespace _06._Repainting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int nylon = int.Parse(Console.ReadLine());
+            int paint = int.Parse(Console.ReadLine());
+            int paintDilluent = int.Parse(Console.ReadLine());  
+            int hours = int.Parse(Console.ReadLine());
+
+            double nylonPrice = (nylon + 2) * 1.5;
+            
+            double paintPrice = (paint + paint * 0.10 ) * 14.50;
+            
+            double paintDilluentPrice = paintDilluent * 5.00;
+            
+            double sum = nylonPrice + paintPrice + paintDilluentPrice + 0.40;
+            double maistorePrice = (0.30 * sum) * hours;
+           
+            double all = sum + maistorePrice;
+            Console.WriteLine(all);
+        }
+    }
+}
