@@ -1,0 +1,30 @@
+using System;
+
+namespace _03._Deposit_Calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1.Създаваме 3 променливи и присвояваме стойност от конзолата
+            //Депозита-double
+            double deposit = double.Parse(Console.ReadLine());
+
+            //срок - int 
+            int term = int.Parse(Console.ReadLine());
+
+            //лихвен процент - double
+            double rate = double.Parse(Console.ReadLine()) * 0.01;
+
+            //2.Създаваме променлива, в коята да пазим сумата
+            //сумата = депозита + срока * (депозита*лихвен процент/ 12)
+            double sum = deposit + term * (deposit * rate / 12);
+
+            //3.Отпечатваме резултата на конзолата
+            Console.WriteLine(sum);
+           
+
+
+        }
+    }
+}
