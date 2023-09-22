@@ -1,0 +1,39 @@
+using System;
+
+namespace _09._Fish_Tank
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1.Четем си от конзолата:
+            //дължината в сантиметри
+            int length = int.Parse(Console.ReadLine());
+
+            //ширината в сантиметри
+            int width = int.Parse(Console.ReadLine());  
+
+           //височината в сантиметри
+           int height = int.Parse(Console.ReadLine());
+
+            //процента - реално число 
+            double percent = double.Parse(Console.ReadLine());
+
+            //2.Пресмятаме обема на аквариума
+            int aquariumVolume = length * width * height;
+
+            //3.Пресмятаме обема в литри 
+            double volumeLiters = aquariumVolume * 0.001;
+
+            //4.Пресмятаме процента 
+            double occupiedSpace = percent / 100;
+
+            //5.Пресмятаме нужните литри
+            double liters = volumeLiters * (1 - occupiedSpace);
+
+            //6.Печатаме на конзолата получения резултат
+            Console.WriteLine(liters);
+
+        }
+    }
+}
